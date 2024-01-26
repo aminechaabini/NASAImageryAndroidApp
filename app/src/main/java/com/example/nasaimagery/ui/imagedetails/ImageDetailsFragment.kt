@@ -1,4 +1,4 @@
-package com.example.nasaimagery.ui.savedImages
+package com.example.nasaimagery.ui.imagedetails
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,12 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.nasaimagery.databinding.FragmentNotificationsBinding
+import com.example.nasaimagery.databinding.FragmentImageDetailsBinding
+import com.example.nasaimagery.databinding.FragmentSavedImagesBinding
 
-class SavedImagesFragment : Fragment() {
+class ImageDetailsFragment : Fragment() {
 
-private var _binding: FragmentNotificationsBinding? = null
+private var _binding: FragmentImageDetailsBinding? = null
   // This property is only valid between onCreateView and
   // onDestroyView.
   private val binding get() = _binding!!
@@ -22,9 +23,9 @@ private var _binding: FragmentNotificationsBinding? = null
     savedInstanceState: Bundle?
   ): View {
     val savedImagesViewModel =
-            ViewModelProvider(this).get(SavedImagesViewModel::class.java)
+            ViewModelProvider(this).get(ImageDetailsViewModel::class.java)
 
-    _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+    _binding = FragmentImageDetailsBinding.inflate(inflater, container, false)
     val root: View = binding.root
 
     val textView: TextView = binding.textNotifications

@@ -16,7 +16,7 @@
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/savedImagesFragment"
-        android:name="com.example.nasaimagery.ui.savedImages.SavedImagesFragment"
-        android:label="fragment_saved_images"
-        tools:layout="@layout/fragment_saved_images" />
+        android:name="com.example.nasaimagery.ui.imagedetails.ImageDetailsFragment"
+        android:label="fragment_image_details"
+        tools:layout="@layout/fragment_image_details" />
 </navigation>

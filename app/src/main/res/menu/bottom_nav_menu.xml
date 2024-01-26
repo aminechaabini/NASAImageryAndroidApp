@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/homeFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:icon="@drawable/ic_home_black_24dp"
-        android:title="Home"/>
-
+        android:title="Home" />
     <item
+        android:id="@+id/imageDetailsFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_folder_24"
+        android:title="ImageDetails" />
+    <item
+        android:id="@+id/settingsFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:icon="@drawable/baseline_settings_24"
         android:title="Settings" />
-
-    <item
-        android:id="@+id/navigation_saved_images"
-        android:icon="@drawable/baseline_folder_24"
-            android:title="Saved Images"/>
-
 </menu>
