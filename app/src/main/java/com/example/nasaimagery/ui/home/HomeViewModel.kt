@@ -14,7 +14,9 @@ class HomeViewModel : ViewModel() {
 
     private val result = MutableLiveData<Result>()
     val image: LiveData<Result> = result
-    private fun getResult(key: String, date: String) {
+    private val _selectedDate = MutableLiveData<String>()
+    val selectedDate: LiveData<String> = _selectedDate
+    fun getResult(key: String, date: String) {
         RetrofitHelper.retrofitService.getResult(key, date).enqueue(object : Callback<Result> {
             override fun onResponse(call: Call<Result>, response: Response<Result>) {
                 if (response.isSuccessful) {
@@ -27,5 +29,8 @@ class HomeViewModel : ViewModel() {
             }
         }
         )
+    }
+    fun setDate(date: String) {
+        _selectedDate.value = date
     }
 }
