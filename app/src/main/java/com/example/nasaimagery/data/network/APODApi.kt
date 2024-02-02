@@ -8,7 +8,11 @@ interface APODApi {
 
     @GET("/planetary/apod")
     fun getResult(
-        @Query("api_key") apiKey: String,
+        @Query("api_key") api_key: String,
         @Query("date") date: String
+    ): Call<Result>
+    @GET("/planetary/apod")
+    fun getResultTodaysDate(
+        @Query("api_key") api_key: String,
     ): Call<Result>
 }

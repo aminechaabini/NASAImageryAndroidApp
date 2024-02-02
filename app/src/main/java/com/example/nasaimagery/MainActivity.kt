@@ -25,7 +25,7 @@ private lateinit var binding: ActivityMainBinding
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(setOf(
-            R.id.homeFragment, R.id.settingsFragment, R.id.savedImagesFragment))
+            R.id.homeFragment, R.id.settingsFragment, R.id.imageDetailsFragment))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }

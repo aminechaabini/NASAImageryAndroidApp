@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:icon="@drawable/baseline_folder_24"
-        android:title="ImageDetails" />
+        android:title="Image Details" />
     <item
         android:id="@+id/settingsFragment"
         android:layout_width="wrap_content"

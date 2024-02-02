@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitHelper {
 
-    private const val baseUrL = "https://api.nasa.gov/planetary/apod"
+    private const val baseUrL = "https://api.nasa.gov"
 
     private val retrofit = Retrofit.Builder().baseUrl(baseUrL)
             .addConverterFactory(GsonConverterFactory.create())
