@@ -1,6 +1,8 @@
 package com.example.nasaimagery.ui
 
+import android.os.Build
 import android.util.Log
+import androidx.annotation.RequiresApi
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -9,6 +11,10 @@ import com.example.nasaimagery.data.network.RetrofitHelper
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.util.Date
 
 class SharedViewModel : ViewModel(){
     private val _result = MutableLiveData<Result>()
@@ -44,10 +50,18 @@ class SharedViewModel : ViewModel(){
         }
         )
     }
-    public fun setDate(date: String) {
+    fun setDate(date: String) {
         _selectedDate.value = date
     }
-//    fun getSelectedDate(date: String){
-//        setDate(date)
-//    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    fun dateIsAfterCurrentDate(date: String): Boolean{
+        val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
+        val current = LocalDate.now().format(formatter)
+        val sdf = SimpleDateFormat("yyyy-MM-dd")
+        val firstDate: Date = sdf.parse(current)
+        val secondDate: Date = sdf.parse(date)
+        return (firstDate.compareTo(secondDate) < 0)
+
+    }
 }
