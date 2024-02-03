@@ -47,6 +47,7 @@ Implémente trois fonctionalités :
 - getResult : met à jour la live data Result en lui affectant l'objet response de l'image correspendant à la date choisie par l'utilisateur.
 - getResultTodaysDate : met à jour la live data Result en lui affectant l'objet response de l'image du jour (default).
 - setDate : met à jour la live data selectedDate.
+- dateIsAfterCurrentDate : vérifie si la date sélectionnée dans le calandrier est supérieure à la date courante, elle retourne un booléen.
 
 #### Fragment Home
 Contient un setOnClickListener sur le bouton 'GET IMAGE' qui va appeler getResult si une date est choisie ou getResultTodaysDate sinon.
