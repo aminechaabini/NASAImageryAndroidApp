@@ -43,12 +43,12 @@ private lateinit var binding: ActivityMainBinding
         connectivityManager.registerDefaultNetworkCallback(object : ConnectivityManager.NetworkCallback() {
             override fun onAvailable(network: Network) {
                 super.onAvailable(network)
-                showToast("Vous êtes connecté(e) à Internet.")
+                showToast("You are connected to Internet.")
             }
 
             override fun onLost(network: Network) {
                 super.onLost(network)
-                showToast("Pas de connexion Internet. Vérifier votre Wifi ou vos données mobiles.")
+                showToast("No Internet. Please verify your WiFi or Mobile Data.")
             }
 
         })
